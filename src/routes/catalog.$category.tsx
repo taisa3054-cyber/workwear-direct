@@ -3,6 +3,11 @@ import { categories, getProductsByCategory, getSubcategories, subcategoryNames }
 import { ProductCard } from "../components/ProductCard";
 import { CTABlock } from "../components/CTABlock";
 import { useState } from "react";
+import { HardHat, FireExtinguisher, Cable, Zap } from "lucide-react";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  HardHat, FireExtinguisher, Cable, Zap,
+};
 
 export const Route = createFileRoute("/catalog/$category")({
   component: CategoryPage,
