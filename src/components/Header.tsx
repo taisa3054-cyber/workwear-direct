@@ -20,6 +20,12 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
           <Settings className="w-5 h-5 text-cta" />
           <span>ФОП Моголюк</span>
+          <span className="hidden lg:inline text-xs font-normal text-primary-foreground/60 ml-1">платник ПДВ</span>
+        </Link>
+        <a href="tel:+380679134640" className="hidden sm:flex items-center gap-1.5 text-primary-foreground/80 hover:text-cta text-sm transition-colors ml-4">
+          <Phone className="w-4 h-4" />
+          +38 067 913 46 40
+        </a>
         </Link>
 
         {/* Desktop nav */}
