@@ -10,7 +10,6 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
               <Settings className="w-5 h-5 text-cta" /> ФОП Моголюк
             </h3>
-            </h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Продаж спецодягу, взуття та супутніх товарів. Платник ПДВ.
             </p>
