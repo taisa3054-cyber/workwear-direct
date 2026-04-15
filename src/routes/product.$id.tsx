@@ -63,7 +63,7 @@ function ProductPage() {
                 height={800}
               />
             </div>
-            {product.images.length > 1 && (
+            {(product.images.length > 1 || product.hasVideo) && (
               <div className="flex gap-3">
                 {product.images.map((img, i) => (
                   <button
@@ -76,6 +76,19 @@ function ProductPage() {
                     <img src={img} alt={`${product.name} фото ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
                   </button>
                 ))}
+              </div>
+            )}
+            {product.hasVideo && product.video && (
+              <div className="mt-4 aspect-video rounded-2xl overflow-hidden bg-muted">
+                <video
+                  src={product.video}
+                  controls
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                  poster={product.images[0]}
+                >
+                  Ваш браузер не підтримує відео.
+                </video>
               </div>
             )}
           </div>
