@@ -4,10 +4,10 @@ import { Settings, Phone } from "lucide-react";
 
 const navLinks = [
   { to: "/" as const, label: "Головна" },
-  { to: "/catalog/specodyag" as const, label: "Спецодяг" },
-  { to: "/catalog/pozhezhniy-inventar" as const, label: "Протипожежний" },
-  { to: "/catalog/shpagat" as const, label: "Шпагат" },
-  { to: "/catalog/elektrodu" as const, label: "Електроди" },
+  { to: "/catalog/specodyag" as const, label: "Спецодяг та взуття" },
+  { to: "/catalog/pozhezhniy-inventar" as const, label: "Протипожежний інвентар" },
+  { to: "/catalog/shpagat" as const, label: "Поліпропіленовий шпагат" },
+  { to: "/catalog/elektrodu" as const, label: "Зварювальні електроди" },
 ];
 
 export function Header() {
@@ -22,12 +22,12 @@ export function Header() {
           <div className="flex flex-col leading-tight">
             <span>ФОП Моголюк</span>
             <span className="text-[10px] font-normal text-primary-foreground/60">платник ПДВ</span>
+            <a href="tel:+380679134640" className="flex items-center gap-1 text-[10px] font-normal text-primary-foreground/60 hover:text-cta transition-colors">
+              <Phone className="w-3 h-3" />
+              +38 067 913 46 40
+            </a>
           </div>
         </Link>
-        <a href="tel:+380679134640" className="hidden sm:flex items-center gap-1.5 text-primary-foreground/80 hover:text-cta text-sm transition-colors ml-4">
-          <Phone className="w-4 h-4" />
-          +38 067 913 46 40
-        </a>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">

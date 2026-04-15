@@ -12,6 +12,7 @@ export interface Product {
   video?: string;
   hasVideo?: boolean;
   hasEmbroidery?: boolean;
+  sortOrder?: number;
 }
 
 export interface Category {
@@ -68,6 +69,7 @@ export const products: Product[] = [
     name: "костюм робочий «Лідер» з напівкомбінезоном. (тк. грета)",
     category: "specodyag",
     subcategory: "litniy",
+    sortOrder: 1,
     price: "1425 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер , 30% бавовна. Щільність 220 г/м.кв.",
@@ -83,6 +85,7 @@ export const products: Product[] = [
     name: "костюм робочий «Майстер» (тк. грета)",
     category: "specodyag",
     subcategory: "litniy",
+    sortOrder: 2,
     price: "1275 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер, 30% бавовна. Щільність 220 г/м.кв",
@@ -215,6 +218,7 @@ export const products: Product[] = [
     name: "костюм робочий «Універсал» синьо-голубий (тк. грета)",
     category: "specodyag",
     subcategory: "litniy",
+    sortOrder: 4,
     price: "1275 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер, 30% бавовна. Щільність 220 г/м.кв",
@@ -230,6 +234,7 @@ export const products: Product[] = [
     name: "костюм робочий «Універсал» чорно-червоний (тк. грета)",
     category: "specodyag",
     subcategory: "litniy",
+    sortOrder: 5,
     price: "1275 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер, 30% бавовна. Щільність 220 г/м.кв",
@@ -245,6 +250,7 @@ export const products: Product[] = [
     name: "костюм робочий «Фахівець» (тк. грета)",
     category: "specodyag",
     subcategory: "litniy",
+    sortOrder: 3,
     price: "1197 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер, 30% бавовна. Щільність 220 г/м.кв",
@@ -429,6 +435,7 @@ export const products: Product[] = [
     name: "напівкомбінезон утеплений «Віват»",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 6,
     price: "1065 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх - тканина оксфорд з PU, В/В, 70% поліестер, 30% бавовна. Щільність 130 гр/м. Підкладка - тканина підкладочна, 100% поліестер. Щільність 90 гр/м. Утеплювач - синтепон. Щільність 150 гр/м.",
@@ -470,6 +477,7 @@ export const products: Product[] = [
     name: "куртка утепленаі «Експерт»",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 7,
     price: "1695 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Тканина  верху – Мікрофайбер з просоченям ВВ,  Щільність 130 г/м.кв Підкладка – Тканина підкладочна склад 100 %поліестер . Щільність 90  г/м.кв Утеплювач -  синтепон; полочка, спинка – щільність 300 г/м.кв, рукав  – 200 г/м.кв,капюшон -100 г/м.кв",
@@ -485,6 +493,7 @@ export const products: Product[] = [
     name: "куртка утепленаі «Віват»",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 8,
     price: "1695 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Тканина  верху – Оксфорд c PU ,В/В  70% поліестер,  Щільність 130 г/м.кв Підкладка – Тканина підкладочна склад 100 %поліестер . Щільність 90  г/м.кв Утеплювач -  синтепон; полочка, спинка – щільність 300 г/м.кв, рукав  – 200 г/м.кв,капюшон -100 г/м.кв",
@@ -526,6 +535,7 @@ export const products: Product[] = [
     name: "куртка на синтапоні «Універсал»",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 10,
     price: "1200 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Тканина  верху – Грета  склад  70% поліестер  , 30% бавовна. Щільність 210 г/м.кв Підкладка – Тканина підкладочна   склад 100 %поліестер . Щільність 90  г/м.кв Утеплювач -  синтапон; спинка – щільність 300 г/м.кв , рукав  – 200 г/м.кв ,капюшон -100 г/м.кв",
@@ -541,6 +551,7 @@ export const products: Product[] = [
     name: "жилет утеплений на синтапоні",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 9,
     price: "780 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Тканина верху -  «Дюспо» склад  100% П/Э. Щільність  110 г/м.кв  Підкладка -тк. підкладкова кол. чорний склад: 100% п/е. Щільність 95г/м.кв Утеплювач -  синтепон, 200 гр./м.кв",
@@ -556,6 +567,7 @@ export const products: Product[] = [
     name: "жилет модельний утеплений сірий",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 12,
     price: "780 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Тканина верху -  «Дюспо» склад  100% П/Э. Щільність  110 г/м.кв Підкладка -тк. підкладкова кол. чорний склад: 100% п/е. Щільність 95г/м.кв Утеплювач -  синтепон, 200 гр./м.кв",
@@ -569,6 +581,7 @@ export const products: Product[] = [
     name: "кофта флісова чорна",
     category: "specodyag",
     subcategory: "zymoviy",
+    sortOrder: 11,
     price: "1065 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Фліс",
@@ -686,7 +699,12 @@ export const products: Product[] = [
 ];
 
 export function getProductsByCategory(categorySlug: string): Product[] {
-  return products.filter((p) => p.category === categorySlug);
+  const items = products.filter((p) => p.category === categorySlug);
+  return items.sort((a, b) => {
+    const aOrder = a.sortOrder ?? 9999;
+    const bOrder = b.sortOrder ?? 9999;
+    return aOrder - bOrder;
+  });
 }
 
 export function getProductsBySubcategory(categorySlug: string, sub: string): Product[] {
