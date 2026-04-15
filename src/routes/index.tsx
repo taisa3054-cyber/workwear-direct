@@ -3,6 +3,16 @@ import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
 import { ShieldCheck, Truck, BadgeDollarSign, Scissors, Infinity, CirclePercent } from "lucide-react";
 
+export const Route = createFileRoute("/")({
+  component: HomePage,
+  head: () => ({
+    meta: [
+      { title: "ФОП Моголюк — Спецодяг, взуття та супутні товари" },
+      { name: "description", content: "Каталог спецодягу, робочого взуття, протипожежного інвентарю. Швидке замовлення через Telegram або email." },
+    ],
+  }),
+});
+
 // Needle-thread S icon
 const NeedleThreadIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
