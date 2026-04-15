@@ -1,26 +1,123 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { categories } from "../data/products";
+import { CTABlock } from "../components/CTABlock";
+import heroBg from "../assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
+  head: () => ({
+    meta: [
+      { title: "ФОП Моголюк — Спецодяг, взуття та супутні товари" },
+      { name: "description", content: "Каталог спецодягу, робочого взуття, протипожежного інвентарю. Швидке замовлення через Telegram або email." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+const advantages = [
+  { icon: "✅", title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
+  { icon: "🚚", title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
+  { icon: "💰", title: "Конкурентні ціни", desc: "Працюємо без посередників" },
+  { icon: "🧵", title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+];
 
-function Index() {
-  return <PlaceholderIndex />;
+const reviews = [
+  { name: "Олександр К.", company: "ТОВ «БудМонтаж»", text: "Замовляємо спецодяг вже 3 роки. Якість відмінна, ціни адекватні. Рекомендую!" },
+  { name: "Ірина М.", company: "ПП «ЕнергоСервіс»", text: "Швидка відправка, зручне замовлення через Telegram. Вишивку логотипу зробили якісно." },
+  { name: "Василь Т.", company: "КП «Комунальник»", text: "Закуповуємо зимовий спецодяг для бригади. Все чітко, по розмірах підійшло ідеально." },
+];
+
+function HomePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="Робітники в спецодязі" className="w-full h-full object-cover" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-hero-overlay" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-40">
+          <div className="max-w-2xl animate-fade-in-up">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight">
+              Спецодяг та засоби <span className="text-cta">захисту</span>
+            </h1>
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-primary-foreground/80 leading-relaxed max-w-xl">
+              Якісний робочий одяг, взуття та супутні товари для вашого підприємства. Доставка по всій Україні.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://t.me/+t--fmhxKx4FlYTYy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-cta-foreground px-8 py-4 rounded-xl text-base font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-cta/30"
+              >
+                📩 Зв'язатися
+              </a>
+              <Link
+                to="/catalog/specodyag"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 hover:border-primary-foreground/60 text-primary-foreground px-8 py-4 rounded-xl text-base font-bold transition-all hover:scale-105"
+              >
+                Переглянути каталог →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">Категорії товарів</h2>
+        <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">Оберіть потрібну категорію для перегляду асортименту</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              to="/catalog/$category"
+              params={{ category: cat.slug }}
+              className="group bg-card border border-border rounded-2xl p-6 text-center hover:border-cta/40 hover:shadow-lg hover:shadow-cta/10 transition-all duration-300"
+            >
+              <span className="text-4xl md:text-5xl block mb-3">{cat.icon}</span>
+              <h3 className="font-bold text-card-foreground group-hover:text-cta transition-colors text-sm md:text-base">{cat.name}</h3>
+              <p className="text-xs text-muted-foreground mt-1">{cat.count} товарів</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Advantages */}
+      <section className="bg-muted py-16 md:py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">Чому обирають нас</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">Досвід, якість та сервіс — основа нашої роботи</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advantages.map((a) => (
+              <div key={a.title} className="bg-card rounded-2xl p-6 border border-border">
+                <span className="text-3xl block mb-3">{a.icon}</span>
+                <h3 className="font-bold text-card-foreground mb-1">{a.title}</h3>
+                <p className="text-sm text-muted-foreground">{a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">Відгуки клієнтів</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {reviews.map((r) => (
+            <div key={r.name} className="bg-card border border-border rounded-2xl p-6">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">«{r.text}»</p>
+              <div>
+                <p className="font-semibold text-card-foreground text-sm">{r.name}</p>
+                <p className="text-xs text-muted-foreground">{r.company}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTABlock />
+    </>
+  );
 }
