@@ -49,8 +49,8 @@ function CategoryPage() {
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Category banner */}
         {cat.banner && (
-          <div className="aspect-[21/6] rounded-2xl overflow-hidden mb-8">
-            <img src={cat.banner} alt={cat.name} className="w-full h-full object-cover" width={1200} height={340} />
+          <div className="aspect-[21/6] rounded-2xl overflow-hidden mb-8 bg-muted">
+            <img src={cat.banner} alt={cat.name} className="w-full h-full object-contain" width={1200} height={340} />
           </div>
         )}
 
