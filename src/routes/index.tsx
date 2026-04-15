@@ -67,7 +67,7 @@ function HomePage() {
       <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">Категорії товарів</h2>
         <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">Оберіть потрібну категорію для перегляду асортименту</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {categories.map((cat) => (
             <Link
               key={cat.slug}

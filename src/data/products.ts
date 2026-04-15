@@ -23,16 +23,16 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  { slug: "specodyag", name: "Спецодяг", description: "Літній та зимовий спецодяг", icon: "👷", count: 40 },
-  { slug: "vzuttia", name: "Робоче взуття", description: "Міцне робоче взуття з захистом", icon: "🥾", count: 4 },
+  { slug: "specodyag", name: "Спецодяг та взуття", description: "Літній, зимовий спецодяг та робоче взуття", icon: "👷", count: 44 },
   { slug: "pozhezhniy-inventar", name: "Протипожежний інвентар", description: "Засоби пожежної безпеки", icon: "🧯", count: 6 },
   { slug: "shpagat", name: "Поліпропіленовий шпагат", description: "Міцний шпагат для різних потреб", icon: "🧵", count: 1 },
   { slug: "elektrodu", name: "Зварювальні електроди", description: "Електроди для зварювальних робіт", icon: "⚡", count: 1 },
 ];
 
 export const subcategoryNames: Record<string, string> = {
-  litniy: "Літній спецодяг",
-  zymoviy: "Зимовий спецодяг",
+  litniy: "Літній",
+  zymoviy: "Зимовий",
+  vzuttia: "Взуття",
 };
 
 export const products: Product[] = [
@@ -581,7 +581,8 @@ export const products: Product[] = [
   {
     id: "cloth-41",
     name: "Чоботи гумові жіночі ПВХ сині",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "660 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: ПВХ Підошва: ПВХ Підкладка: 90% поліестер, 10% еластомер Метод виготовлення: суцільнолитий",
@@ -590,7 +591,8 @@ export const products: Product[] = [
   {
     id: "cloth-42",
     name: "Чоботи гумові чоловічі ПВХ зелені",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "660 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: ПВХ Підошва: ПВХ Підкладка: 90% поліестер, 10% еластомер Метод виготовлення: суцільнолитий",
@@ -599,7 +601,8 @@ export const products: Product[] = [
   {
     id: "cloth-43",
     name: "Черевики робочі літні чоловічі",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "1080 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: Юфть-кирза Підошва - антискозлива, мастильна підошва виготовлена з поліуретану",
@@ -608,7 +611,8 @@ export const products: Product[] = [
   {
     id: "cloth-44",
     name: "Туфлі робочі чоловічі",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "990 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: Юфть-кирза Підошва - антискозлива, мастильна підошва виготовлена з поліуретану",

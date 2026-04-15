@@ -20,7 +20,7 @@ export const Route = createFileRoute("/product/$id")({
 function ProductPage() {
   const { id } = Route.useParams();
   const product = getProductById(id);
-  const [activeImage, setActiveImage] = useState(0);
+  const [activeImage, setActiveImage] = useState<number | 'video'>(0);
 
   if (!product) {
     return (
@@ -55,42 +55,53 @@ function ProductPage() {
           {/* Images */}
           <div>
             <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-muted mb-4">
-              <img
-                src={product.images[activeImage]}
-                alt={product.name}
-                className="w-full h-full object-cover"
-                width={600}
-                height={800}
-              />
-            </div>
-            {(product.images.length > 1 || product.hasVideo) && (
-              <div className="flex gap-3">
-                {product.images.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveImage(i)}
-                    className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors ${
-                      i === activeImage ? "border-cta" : "border-border hover:border-cta/40"
-                    }`}
-                  >
-                    <img src={img} alt={`${product.name} фото ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
-                  </button>
-                ))}
-              </div>
-            )}
-            {product.hasVideo && product.video && (
-              <div className="mt-4 aspect-video rounded-2xl overflow-hidden bg-muted">
+              {activeImage === 'video' && product.video ? (
                 <video
                   src={product.video}
                   controls
+                  autoPlay
                   preload="metadata"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-black"
                   poster={product.images[0]}
                 >
                   Ваш браузер не підтримує відео.
                 </video>
-              </div>
-            )}
+              ) : (
+                <img
+                  src={product.images[typeof activeImage === 'number' ? activeImage : 0]}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  width={600}
+                  height={800}
+                />
+              )}
+            </div>
+            <div className="flex gap-3">
+              {product.images.map((img, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveImage(i)}
+                  className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors ${
+                    activeImage === i ? "border-cta" : "border-border hover:border-cta/40"
+                  }`}
+                >
+                  <img src={img} alt={`${product.name} фото ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                </button>
+              ))}
+              {product.hasVideo && product.video && (
+                <button
+                  onClick={() => setActiveImage('video')}
+                  className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors relative ${
+                    activeImage === 'video' ? "border-cta" : "border-border hover:border-cta/40"
+                  }`}
+                >
+                  <img src={product.images[0]} alt="Відео" className="w-full h-full object-cover" loading="lazy" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                    <span className="text-white text-xl">▶</span>
+                  </div>
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Details */}
