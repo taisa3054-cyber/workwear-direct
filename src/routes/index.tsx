@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
-import { ShieldCheck, Truck, BadgeDollarSign, Scissors, Infinity, CirclePercent } from "lucide-react";
+import { ShieldCheck, Truck, BadgeDollarSign, Scissors, Infinity, CirclePercent, FileText } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -27,6 +27,7 @@ const advantages = [
   { icon: Truck, title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
   { icon: BadgeDollarSign, title: "Конкурентні ціни", desc: "Працюємо без посередників" },
   { icon: Scissors, title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+  { icon: FileText, title: "Платник ПДВ", desc: "Офіційна робота з ПДВ — повний пакет документів" },
   { icon: NeedleThreadIcon, title: "Індивідуальний підхід", desc: "Наносимо логотипи та підбираємо комплекти під специфіку вашої галузі" },
   { icon: CirclePercent, title: "Спеціальні умови для опту", desc: "Розгалужена система знижок для гуртових замовників" },
   { icon: Infinity, title: "Перевірена витривалість", desc: "Контроль якості кожного шва. Висока зносостійкість матеріалів протягом багатьох сезонів" },
@@ -45,9 +46,6 @@ function HomePage() {
       <section className="bg-primary py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-2xl animate-fade-in-up">
-            <span className="inline-block bg-cta/20 text-cta text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              платник ПДВ
-            </span>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight">
               Спецодяг та засоби <span className="text-cta">захисту</span>
             </h1>
