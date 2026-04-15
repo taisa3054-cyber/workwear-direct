@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
+import { ShieldCheck, Truck, BadgeDollarSign, Scissors } from "lucide-react";
 import heroBg from "../assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
@@ -14,10 +15,10 @@ export const Route = createFileRoute("/")({
 });
 
 const advantages = [
-  { icon: "✅", title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
-  { icon: "🚚", title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
-  { icon: "💰", title: "Конкурентні ціни", desc: "Працюємо без посередників" },
-  { icon: "🧵", title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+  { icon: ShieldCheck, title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
+  { icon: Truck, title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
+  { icon: BadgeDollarSign, title: "Конкурентні ціни", desc: "Працюємо без посередників" },
+  { icon: Scissors, title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
 ];
 
 const reviews = [
@@ -76,8 +77,8 @@ function HomePage() {
               className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-cta/40 hover:shadow-lg hover:shadow-cta/10 transition-all duration-300"
             >
               {cat.banner && (
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={cat.banner} alt={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={cat.banner} alt={cat.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
               )}
               <div className="p-4 text-center">
@@ -97,7 +98,7 @@ function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {advantages.map((a) => (
               <div key={a.title} className="bg-card rounded-2xl p-6 border border-border">
-                <span className="text-3xl block mb-3">{a.icon}</span>
+                <a.icon className="w-8 h-8 text-cta mb-3" />
                 <h3 className="font-bold text-card-foreground mb-1">{a.title}</h3>
                 <p className="text-sm text-muted-foreground">{a.desc}</p>
               </div>

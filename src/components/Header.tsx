@@ -1,12 +1,13 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
+import { Settings } from "lucide-react";
 
 const navLinks = [
   { to: "/" as const, label: "Головна" },
   { to: "/catalog/specodyag" as const, label: "Спецодяг" },
-  { to: "/catalog/protipozhezhnyj" as const, label: "Протипожежний" },
+  { to: "/catalog/pozhezhniy-inventar" as const, label: "Протипожежний" },
   { to: "/catalog/shpagat" as const, label: "Шпагат" },
-  { to: "/catalog/elektrody" as const, label: "Електроди" },
+  { to: "/catalog/elektrodu" as const, label: "Електроди" },
 ];
 
 export function Header() {
@@ -17,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary/20">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
-          <span className="text-cta text-xl">⚙</span>
+          <Settings className="w-5 h-5 text-cta" />
           <span>ФОП Моголюк</span>
         </Link>
 

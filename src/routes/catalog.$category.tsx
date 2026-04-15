@@ -3,6 +3,11 @@ import { categories, getProductsByCategory, getSubcategories, subcategoryNames }
 import { ProductCard } from "../components/ProductCard";
 import { CTABlock } from "../components/CTABlock";
 import { useState } from "react";
+import { HardHat, FireExtinguisher, Cable, Zap } from "lucide-react";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  HardHat, FireExtinguisher, Cable, Zap,
+};
 
 export const Route = createFileRoute("/catalog/$category")({
   component: CategoryPage,
@@ -49,13 +54,16 @@ function CategoryPage() {
       <section className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Category banner */}
         {cat.banner && (
-          <div className="aspect-[21/6] rounded-2xl overflow-hidden mb-8">
-            <img src={cat.banner} alt={cat.name} className="w-full h-full object-cover" width={1200} height={340} />
+          <div className="aspect-[21/6] rounded-2xl overflow-hidden mb-8 bg-muted">
+            <img src={cat.banner} alt={cat.name} className="w-full h-full object-contain" width={1200} height={340} />
           </div>
         )}
 
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{cat.icon} {cat.name}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2 flex items-center gap-2">
+            {(() => { const Icon = iconMap[cat.icon]; return Icon ? <Icon className="w-7 h-7 text-cta" /> : null; })()}
+            {cat.name}
+          </h1>
           <p className="text-muted-foreground">{cat.description} — {allProducts.length} товарів</p>
         </div>
 
