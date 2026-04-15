@@ -123,7 +123,7 @@ function ProductPage() {
 
             {product.hasEmbroidery && (
               <div className="bg-cta/10 border border-cta/20 rounded-xl p-4 mb-6">
-                <p className="text-sm font-medium text-foreground">🧵 Можлива вишивка логотипу вашої компанії — уточнюйте деталі</p>
+                <p className="text-sm font-medium text-foreground flex items-center gap-2"><Scissors className="w-4 h-4 text-cta" /> Можлива вишивка логотипу вашої компанії — уточнюйте деталі</p>
               </div>
             )}
 
