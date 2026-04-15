@@ -21,15 +21,17 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary/20">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
-            <Settings className="w-5 h-5 text-cta" />
-            <span>ФОП Моголюк</span>
-          </Link>
-          <a href="tel:+380679134640" className="flex items-center gap-1 text-xs text-primary-foreground/60 hover:text-cta transition-colors ml-2">
-            <Phone className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">+38 067 913 46 40</span>
-          </a>
+        <div className="flex items-center gap-3">
+          <Settings className="w-5 h-5 text-cta shrink-0" />
+          <div className="flex flex-col leading-tight">
+            <Link to="/" className="text-primary-foreground font-bold text-lg tracking-tight whitespace-nowrap">
+              ФОП Моголюк
+            </Link>
+            <a href="tel:+380679134640" className="flex items-center gap-1 text-xs text-primary-foreground/60 hover:text-cta transition-colors whitespace-nowrap">
+              <Phone className="w-3 h-3" />
+              <span>+38 067 913 46 40</span>
+            </a>
+          </div>
         </div>
 
         {/* Desktop nav */}
