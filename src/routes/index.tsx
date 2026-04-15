@@ -73,11 +73,17 @@ function HomePage() {
               key={cat.slug}
               to="/catalog/$category"
               params={{ category: cat.slug }}
-              className="group bg-card border border-border rounded-2xl p-6 text-center hover:border-cta/40 hover:shadow-lg hover:shadow-cta/10 transition-all duration-300"
+              className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-cta/40 hover:shadow-lg hover:shadow-cta/10 transition-all duration-300"
             >
-              <span className="text-4xl md:text-5xl block mb-3">{cat.icon}</span>
-              <h3 className="font-bold text-card-foreground group-hover:text-cta transition-colors text-sm md:text-base">{cat.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{cat.count} товарів</p>
+              {cat.banner && (
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={cat.banner} alt={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                </div>
+              )}
+              <div className="p-4 text-center">
+                <h3 className="font-bold text-card-foreground group-hover:text-cta transition-colors text-sm md:text-base">{cat.name}</h3>
+                <p className="text-xs text-muted-foreground mt-1">{cat.count} товарів</p>
+              </div>
             </Link>
           ))}
         </div>
