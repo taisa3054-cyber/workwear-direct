@@ -98,7 +98,7 @@ function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {advantages.map((a) => (
               <div key={a.title} className="bg-card rounded-2xl p-6 border border-border">
-                <span className="text-3xl block mb-3">{a.icon}</span>
+                <a.icon className="w-8 h-8 text-cta mb-3" />
                 <h3 className="font-bold text-card-foreground mb-1">{a.title}</h3>
                 <p className="text-sm text-muted-foreground">{a.desc}</p>
               </div>
