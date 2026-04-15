@@ -12,6 +12,7 @@ export interface Product {
   video?: string;
   hasVideo?: boolean;
   hasEmbroidery?: boolean;
+  sortOrder?: number;
 }
 
 export interface Category {
