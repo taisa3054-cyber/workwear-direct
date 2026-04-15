@@ -26,7 +26,6 @@ export function Header() {
           <Phone className="w-4 h-4" />
           +38 067 913 46 40
         </a>
-        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
