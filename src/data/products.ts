@@ -687,7 +687,12 @@ export const products: Product[] = [
 ];
 
 export function getProductsByCategory(categorySlug: string): Product[] {
-  return products.filter((p) => p.category === categorySlug);
+  const items = products.filter((p) => p.category === categorySlug);
+  return items.sort((a, b) => {
+    const aOrder = a.sortOrder ?? 9999;
+    const bOrder = b.sortOrder ?? 9999;
+    return aOrder - bOrder;
+  });
 }
 
 export function getProductsBySubcategory(categorySlug: string, sub: string): Product[] {
