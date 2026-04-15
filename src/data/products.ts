@@ -581,7 +581,8 @@ export const products: Product[] = [
   {
     id: "cloth-41",
     name: "Чоботи гумові жіночі ПВХ сині",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "660 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: ПВХ Підошва: ПВХ Підкладка: 90% поліестер, 10% еластомер Метод виготовлення: суцільнолитий",
@@ -590,7 +591,8 @@ export const products: Product[] = [
   {
     id: "cloth-42",
     name: "Чоботи гумові чоловічі ПВХ зелені",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "660 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: ПВХ Підошва: ПВХ Підкладка: 90% поліестер, 10% еластомер Метод виготовлення: суцільнолитий",
@@ -599,7 +601,8 @@ export const products: Product[] = [
   {
     id: "cloth-43",
     name: "Черевики робочі літні чоловічі",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "1080 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: Юфть-кирза Підошва - антискозлива, мастильна підошва виготовлена з поліуретану",
@@ -608,7 +611,8 @@ export const products: Product[] = [
   {
     id: "cloth-44",
     name: "Туфлі робочі чоловічі",
-    category: "vzuttia",
+    category: "specodyag",
+    subcategory: "vzuttia",
     price: "990 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "Верх взуття: Юфть-кирза Підошва - антискозлива, мастильна підошва виготовлена з поліуретану",
