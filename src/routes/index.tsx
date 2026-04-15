@@ -77,8 +77,8 @@ function HomePage() {
               className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-cta/40 hover:shadow-lg hover:shadow-cta/10 transition-all duration-300"
             >
               {cat.banner && (
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={cat.banner} alt={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  <img src={cat.banner} alt={cat.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
               )}
               <div className="p-4 text-center">
