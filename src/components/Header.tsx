@@ -19,8 +19,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
           <Settings className="w-5 h-5 text-cta" />
-          <span>ФОП Моголюк</span>
-          <span className="hidden lg:inline text-xs font-normal text-primary-foreground/60 ml-1">платник ПДВ</span>
+          <div className="flex flex-col leading-tight">
+            <span>ФОП Моголюк</span>
+            <span className="text-[10px] font-normal text-primary-foreground/60">платник ПДВ</span>
+          </div>
         </Link>
         <a href="tel:+380679134640" className="hidden sm:flex items-center gap-1.5 text-primary-foreground/80 hover:text-cta text-sm transition-colors ml-4">
           <Phone className="w-4 h-4" />
