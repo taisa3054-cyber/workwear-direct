@@ -1,24 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
-import { ShieldCheck, Truck, BadgeDollarSign, Scissors } from "lucide-react";
-import heroBg from "../assets/hero-bg.jpg";
+import { ShieldCheck, Truck, BadgeDollarSign, Scissors, Infinity, CirclePercent } from "lucide-react";
 
-export const Route = createFileRoute("/")({
-  component: HomePage,
-  head: () => ({
-    meta: [
-      { title: "ФОП Моголюк — Спецодяг, взуття та супутні товари" },
-      { name: "description", content: "Каталог спецодягу, робочого взуття, протипожежного інвентарю. Швидке замовлення через Telegram або email." },
-    ],
-  }),
-});
+// Needle-thread S icon
+const NeedleThreadIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5z" />
+    <path d="M12 12c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5z" />
+    <line x1="12" y1="2" x2="12" y2="5" />
+  </svg>
+);
 
 const advantages = [
   { icon: ShieldCheck, title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
   { icon: Truck, title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
   { icon: BadgeDollarSign, title: "Конкурентні ціни", desc: "Працюємо без посередників" },
   { icon: Scissors, title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+  { icon: NeedleThreadIcon, title: "Індивідуальний підхід", desc: "Наносимо логотипи та підбираємо комплекти під специфіку вашої галузі" },
+  { icon: CirclePercent, title: "Спеціальні умови для опту", desc: "Розгалужена система знижок для гуртових замовників" },
+  { icon: Infinity, title: "Перевірена витривалість", desc: "Контроль якості кожного шва. Висока зносостійкість матеріалів протягом багатьох сезонів" },
 ];
 
 const reviews = [
