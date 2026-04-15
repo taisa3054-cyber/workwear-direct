@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { getProductById, categories } from "../data/products";
+import { getProductById, categories, subcategoryNames } from "../data/products";
 import { SizeChartModal } from "../components/SizeChartModal";
 import { CTABlock } from "../components/CTABlock";
 import { useState } from "react";
@@ -83,7 +83,7 @@ function ProductPage() {
           {/* Details */}
           <div>
             {product.subcategory && (
-              <p className="text-sm text-cta font-medium mb-2">{product.subcategory}</p>
+              <p className="text-sm text-cta font-medium mb-2">{subcategoryNames[product.subcategory] || product.subcategory}</p>
             )}
             <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{product.name}</h1>
             <p className="text-3xl font-extrabold text-cta mb-6">{product.price}</p>

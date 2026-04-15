@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { categories, getProductsByCategory, getSubcategories } from "../data/products";
+import { categories, getProductsByCategory, getSubcategories, subcategoryNames } from "../data/products";
 import { ProductCard } from "../components/ProductCard";
 import { CTABlock } from "../components/CTABlock";
 import { useState } from "react";
@@ -73,7 +73,7 @@ function CategoryPage() {
                     activeSubcat === sub ? "bg-cta text-cta-foreground" : "bg-muted text-muted-foreground hover:bg-accent"
                   }`}
                 >
-                  {sub} ({count})
+                  {subcategoryNames[sub] || sub} ({count})
                 </button>
               );
             })}
