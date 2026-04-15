@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
-import { Settings } from "lucide-react";
+import { Settings, Phone } from "lucide-react";
 
 const navLinks = [
   { to: "/" as const, label: "Головна" },
