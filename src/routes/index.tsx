@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
+import { ShieldCheck, Truck, BadgeDollarSign, Scissors } from "lucide-react";
 import heroBg from "../assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
@@ -14,10 +15,10 @@ export const Route = createFileRoute("/")({
 });
 
 const advantages = [
-  { icon: "✅", title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
-  { icon: "🚚", title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
-  { icon: "💰", title: "Конкурентні ціни", desc: "Працюємо без посередників" },
-  { icon: "🧵", title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+  { icon: ShieldCheck, title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
+  { icon: Truck, title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
+  { icon: BadgeDollarSign, title: "Конкурентні ціни", desc: "Працюємо без посередників" },
+  { icon: Scissors, title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
 ];
 
 const reviews = [
