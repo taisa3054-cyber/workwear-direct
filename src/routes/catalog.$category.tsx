@@ -60,7 +60,10 @@ function CategoryPage() {
         )}
 
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{cat.icon} {cat.name}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-2 flex items-center gap-2">
+            {(() => { const Icon = iconMap[cat.icon]; return Icon ? <Icon className="w-7 h-7 text-cta" /> : null; })()}
+            {cat.name}
+          </h1>
           <p className="text-muted-foreground">{cat.description} — {allProducts.length} товарів</p>
         </div>
 
