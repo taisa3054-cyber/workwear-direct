@@ -20,7 +20,7 @@ export const Route = createFileRoute("/product/$id")({
 function ProductPage() {
   const { id } = Route.useParams();
   const product = getProductById(id);
-  const [activeImage, setActiveImage] = useState(0);
+  const [activeImage, setActiveImage] = useState<number | 'video'>(0);
 
   if (!product) {
     return (
