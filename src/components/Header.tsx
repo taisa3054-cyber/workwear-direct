@@ -18,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary/20">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
-          <span className="text-cta text-xl">⚙</span>
+          <Settings className="w-5 h-5 text-cta" />
           <span>ФОП Моголюк</span>
         </Link>
 
