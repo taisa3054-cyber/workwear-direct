@@ -10,6 +10,10 @@ const navLinks = [
   { to: "/catalog/elektrodu" as const, label: "Зварювальні електроди" },
 ];
 
+const TelegramIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.95 7.47l-1.97 9.28c-.15.67-.54.83-1.09.52l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.05 5.56-5.02c.24-.22-.05-.33-.37-.13l-6.87 4.33-2.96-.92c-.64-.2-.66-.64.14-.95l11.58-4.46c.53-.2 1 .13.83.93z"/></svg>
+);
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -17,17 +21,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary/20">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
-          <Settings className="w-5 h-5 text-cta" />
-          <div className="flex flex-col leading-tight">
+        <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 text-primary-foreground font-bold text-lg tracking-tight">
+            <Settings className="w-5 h-5 text-cta" />
             <span>ФОП Моголюк</span>
-            <span className="text-[10px] font-normal text-primary-foreground/60">платник ПДВ</span>
-            <a href="tel:+380679134640" className="flex items-center gap-1 text-[10px] font-normal text-primary-foreground/60 hover:text-cta transition-colors">
-              <Phone className="w-3 h-3" />
-              +38 067 913 46 40
-            </a>
-          </div>
-        </Link>
+          </Link>
+          <a href="tel:+380679134640" className="flex items-center gap-1 text-xs text-primary-foreground/60 hover:text-cta transition-colors ml-2">
+            <Phone className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">+38 067 913 46 40</span>
+          </a>
+        </div>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
@@ -50,7 +53,8 @@ export function Header() {
             rel="noopener noreferrer"
             className="ml-3 inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-cta-foreground px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
           >
-            📩 Зв'язатися
+            <TelegramIcon className="w-4 h-4" />
+            Зв'язатися
           </a>
         </nav>
 
@@ -94,7 +98,8 @@ export function Header() {
               rel="noopener noreferrer"
               className="mt-2 flex items-center justify-center gap-2 bg-cta text-cta-foreground px-4 py-3 rounded-lg text-base font-semibold"
             >
-              📩 Написати в Telegram
+              <TelegramIcon className="w-5 h-5" />
+              Написати в Telegram
             </a>
           </div>
         </nav>

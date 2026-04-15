@@ -1,24 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { categories } from "../data/products";
 import { CTABlock } from "../components/CTABlock";
-import { ShieldCheck, Truck, BadgeDollarSign, Scissors } from "lucide-react";
-import heroBg from "../assets/hero-bg.jpg";
+import { ShieldCheck, Truck, BadgeDollarSign, Scissors, Infinity, CirclePercent } from "lucide-react";
 
-export const Route = createFileRoute("/")({
-  component: HomePage,
-  head: () => ({
-    meta: [
-      { title: "ФОП Моголюк — Спецодяг, взуття та супутні товари" },
-      { name: "description", content: "Каталог спецодягу, робочого взуття, протипожежного інвентарю. Швидке замовлення через Telegram або email." },
-    ],
-  }),
-});
+// Needle-thread S icon
+const NeedleThreadIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5z" />
+    <path d="M12 12c-2 0-4 2-4 5s2 5 4 5 4-2 4-5-2-5-4-5z" />
+    <line x1="12" y1="2" x2="12" y2="5" />
+  </svg>
+);
 
 const advantages = [
   { icon: ShieldCheck, title: "Сертифікована якість", desc: "Вся продукція відповідає стандартам ДСТУ" },
   { icon: Truck, title: "Доставка по Україні", desc: "Відправка Новою Поштою в день замовлення" },
   { icon: BadgeDollarSign, title: "Конкурентні ціни", desc: "Працюємо без посередників" },
   { icon: Scissors, title: "Вишивка логотипу", desc: "Нанесення символіки вашої компанії" },
+  { icon: NeedleThreadIcon, title: "Індивідуальний підхід", desc: "Наносимо логотипи та підбираємо комплекти під специфіку вашої галузі" },
+  { icon: CirclePercent, title: "Спеціальні умови для опту", desc: "Розгалужена система знижок для гуртових замовників" },
+  { icon: Infinity, title: "Перевірена витривалість", desc: "Контроль якості кожного шва. Висока зносостійкість матеріалів протягом багатьох сезонів" },
 ];
 
 const reviews = [
@@ -31,13 +32,12 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="Робітники в спецодязі" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-hero-overlay" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-40">
+      <section className="bg-primary py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-2xl animate-fade-in-up">
+            <span className="inline-block bg-cta/20 text-cta text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              платник ПДВ
+            </span>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight">
               Спецодяг та засоби <span className="text-cta">захисту</span>
             </h1>
@@ -95,7 +95,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">Чому обирають нас</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">Досвід, якість та сервіс — основа нашої роботи</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {advantages.map((a) => (
               <div key={a.title} className="bg-card rounded-2xl p-6 border border-border">
                 <a.icon className="w-8 h-8 text-cta mb-3" />
