@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Product } from "../data/products";
+import { subcategoryNames } from "../data/products";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
@@ -21,7 +22,7 @@ export function ProductCard({ product }: { product: Product }) {
           {product.name}
         </h3>
         {product.subcategory && (
-          <p className="text-xs text-muted-foreground mt-1">{product.subcategory}</p>
+          <p className="text-xs text-muted-foreground mt-1">{subcategoryNames[product.subcategory] || product.subcategory}</p>
         )}
         <p className="text-cta font-bold mt-2">{product.price}</p>
       </div>
