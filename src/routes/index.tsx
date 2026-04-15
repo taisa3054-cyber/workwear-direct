@@ -95,7 +95,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">Чому обирають нас</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">Досвід, якість та сервіс — основа нашої роботи</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {advantages.map((a) => (
               <div key={a.title} className="bg-card rounded-2xl p-6 border border-border">
                 <a.icon className="w-8 h-8 text-cta mb-3" />
