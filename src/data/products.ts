@@ -624,7 +624,7 @@ export const products: Product[] = [
     name: "Вогнегасник ВП-2 / ВП-5 / ВП-6 / ВП-9 / ВП-50 / ВП-100",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%92%D0%9F_wy4bpz.webp"],
   },
   {
@@ -632,7 +632,7 @@ export const products: Product[] = [
     name: "Вогнегасник ВВК-2 / ВВК-3 / ВВК-5 / ВВК-7",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%92%D0%92%D0%9A_cmluse.webp"],
   },
   {
@@ -640,7 +640,7 @@ export const products: Product[] = [
     name: "Стенд пожежний з відкидним ящиком для піску",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159126/%D0%A1%D1%82%D0%B5%D0%BD%D0%B4_%D0%BF%D0%BE%D0%B6%D0%B5%D0%B6%D0%BD%D0%B8%D0%B9_%D0%B7_%D0%B2%D1%96%D0%B4%D0%BA%D0%B8%D0%B4%D0%BD%D0%B8%D0%BC_%D1%8F%D1%89%D0%B8%D0%BA%D0%BE%D0%BC_%D0%B4%D0%BB%D1%8F_%D0%BF%D1%96%D1%81%D0%BA%D1%83_hriv6t.webp"],
   },
   {
@@ -648,7 +648,7 @@ export const products: Product[] = [
     name: "Щит пожежний відкритого типу",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%A9%D0%B8%D1%82_%D0%BF%D0%BE%D0%B6%D0%B5%D0%B6%D0%BD%D0%B8%D0%B9_%D0%B2%D1%96%D0%B4%D0%BA%D1%80%D0%B8%D1%82%D0%BE%D0%B3%D0%BE_%D1%82%D0%B8%D0%BF%D1%83_bquviq.webp"],
   },
   {
@@ -656,7 +656,7 @@ export const products: Product[] = [
     name: "Рукави пожежні d25мм / d51мм / d66мм / d70мм",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159126/%D0%A0%D1%83%D0%BA%D0%B0%D0%B2%D0%B8_%D0%BF%D0%BE%D0%B6%D0%B5%D0%B6%D0%BD%D1%96_mm5sub.webp"],
   },
   {
@@ -664,7 +664,7 @@ export const products: Product[] = [
     name: "лом, багор, відро конусне, ломата, сокира",
     category: "pozhezhniy-inventar",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Надійне обладнання для забезпечення пожежної безпеки вашого підприємства.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0%D1%86%D1%8F_%D0%9F%D0%9F%D0%96_b0x0ee.webp"],
   },
   {
@@ -672,7 +672,7 @@ export const products: Product[] = [
     name: "Шпагат поліпропіленовий 500-9250 текс",
     category: "shpagat",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Міцний поліпропіленовий шпагат для господарських та промислових потреб.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159126/%D0%A8%D0%BF%D0%B0%D0%B3%D0%B0%D1%82_qkpbf9.webp"],
   },
   {
@@ -680,7 +680,7 @@ export const products: Product[] = [
     name: "АНО-4  / АНО-21 / АНО-36 / УОНІ 13/55 / МР-3",
     category: "elektrodu",
     price: "Ціна за запитом",
-    description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
+    description: "Якісні зварювальні електроди для професійних та побутових зварювальних робіт.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B4%D0%B8_plgnfc.webp"],
   },
 ];
