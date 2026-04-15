@@ -32,13 +32,12 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="Робітники в спецодязі" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-hero-overlay" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-40">
+      <section className="bg-primary py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-2xl animate-fade-in-up">
+            <span className="inline-block bg-cta/20 text-cta text-xs font-semibold px-3 py-1 rounded-full mb-4">
+              платник ПДВ
+            </span>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight">
               Спецодяг та засоби <span className="text-cta">захисту</span>
             </h1>
