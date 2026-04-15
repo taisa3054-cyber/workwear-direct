@@ -623,7 +623,7 @@ export const products: Product[] = [
     id: "cloth-45",
     name: "Вогнегасник ВП-2 / ВП-5 / ВП-6 / ВП-9 / ВП-50 / ВП-100",
     category: "pozhezhniy-inventar",
-    price: "уточняйте",
+    price: "Ціна за запитом",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     images: ["https://res.cloudinary.com/durcnm4ea/image/upload/v1776159125/%D0%92%D0%9F_wy4bpz.webp"],
   },
