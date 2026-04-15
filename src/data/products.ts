@@ -70,7 +70,6 @@ export const products: Product[] = [
     category: "specodyag",
     subcategory: "litniy",
     sortOrder: 1,
-    sortOrder: 1,
     price: "1425 грн",
     description: "Зручний та практичний спецодяг для роботи. Забезпечує комфорт та захист.",
     material: "тк. Грета 70% поліестер , 30% бавовна. Щільність 220 г/м.кв.",
