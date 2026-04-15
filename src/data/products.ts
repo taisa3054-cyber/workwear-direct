@@ -23,16 +23,16 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  { slug: "specodyag", name: "Спецодяг", description: "Літній та зимовий спецодяг", icon: "👷", count: 40 },
-  { slug: "vzuttia", name: "Робоче взуття", description: "Міцне робоче взуття з захистом", icon: "🥾", count: 4 },
+  { slug: "specodyag", name: "Спецодяг та взуття", description: "Літній, зимовий спецодяг та робоче взуття", icon: "👷", count: 44 },
   { slug: "pozhezhniy-inventar", name: "Протипожежний інвентар", description: "Засоби пожежної безпеки", icon: "🧯", count: 6 },
   { slug: "shpagat", name: "Поліпропіленовий шпагат", description: "Міцний шпагат для різних потреб", icon: "🧵", count: 1 },
   { slug: "elektrodu", name: "Зварювальні електроди", description: "Електроди для зварювальних робіт", icon: "⚡", count: 1 },
 ];
 
 export const subcategoryNames: Record<string, string> = {
-  litniy: "Літній спецодяг",
-  zymoviy: "Зимовий спецодяг",
+  litniy: "Літній",
+  zymoviy: "Зимовий",
+  vzuttia: "Взуття",
 };
 
 export const products: Product[] = [
