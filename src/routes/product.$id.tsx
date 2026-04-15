@@ -3,6 +3,7 @@ import { getProductById, categories, subcategoryNames } from "../data/products";
 import { SizeChartModal } from "../components/SizeChartModal";
 import { CTABlock } from "../components/CTABlock";
 import { useState } from "react";
+import { Scissors } from "lucide-react";
 
 export const Route = createFileRoute("/product/$id")({
   component: ProductPage,
