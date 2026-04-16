@@ -55,7 +55,7 @@ function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Images */}
           <div>
-            <div className="aspect-[4/5] md:aspect-[3/4] max-h-[60vh] md:max-h-[70vh] rounded-2xl overflow-hidden bg-muted mb-4">
+            <div className="aspect-[3/4] max-h-[55vh] md:max-h-[70vh] rounded-2xl overflow-hidden bg-muted mb-4">
               {activeImage === 'video' && product.video ? (
                 <video
                   src={product.video}
@@ -71,7 +71,7 @@ function ProductPage() {
                 <img
                   src={product.images[typeof activeImage === 'number' ? activeImage : 0]}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   width={600}
                   height={800}
                 />
