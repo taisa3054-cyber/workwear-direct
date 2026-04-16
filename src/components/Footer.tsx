@@ -21,6 +21,16 @@ export function Footer() {
               <li><Link to="/catalog/protipozhezhnyj" className="hover:text-cta transition-colors">Протипожежний інвентар</Link></li>
               <li><Link to="/catalog/shpagat" className="hover:text-cta transition-colors">Шпагат</Link></li>
               <li><Link to="/catalog/elektrody" className="hover:text-cta transition-colors">Електроди</Link></li>
+              <li>
+                <a
+                  href="https://res.cloudinary.com/durcnm4ea/image/upload/v1776169660/%D0%9F%D1%80%D0%B0%D0%B9%D1%81_qrblaz.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cta transition-colors"
+                >
+                  📄 Прайс-лист (PDF)
+                </a>
+              </li>
             </ul>
           </div>
           <div>
