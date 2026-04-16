@@ -55,7 +55,7 @@ function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Images */}
           <div>
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-muted mb-4">
+            <div className="aspect-[4/5] md:aspect-[3/4] max-h-[60vh] md:max-h-[70vh] rounded-2xl overflow-hidden bg-muted mb-4">
               {activeImage === 'video' && product.video ? (
                 <video
                   src={product.video}
