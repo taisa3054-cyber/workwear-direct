@@ -1,6 +1,6 @@
 export function CTABlock() {
   return (
-    <section className="bg-primary py-16 px-4">
+    <section className="bg-gradient-hero py-16 px-4">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
           Потрібна консультація?
