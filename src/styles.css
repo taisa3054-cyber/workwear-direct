@@ -54,56 +54,57 @@
   --color-accent-yellow: var(--accent-yellow);
   --color-accent-yellow-foreground: var(--accent-yellow-foreground);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Montserrat", "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.99 0.005 250);
-  --foreground: oklch(0.16 0.04 265);
+  --background: oklch(0.978 0.002 250); /* #F8F9FA */
+  --foreground: oklch(0.286 0 0); /* #2D2D2D */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0.04 265);
+  --card-foreground: oklch(0.286 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.04 265);
-  --primary: oklch(0.22 0.09 265);
+  --popover-foreground: oklch(0.286 0 0);
+  --primary: oklch(0.286 0 0); /* #2D2D2D */
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.96 0.02 260);
-  --secondary-foreground: oklch(0.16 0.04 265);
-  --muted: oklch(0.96 0.015 260);
-  --muted-foreground: oklch(0.45 0.03 260);
-  --accent: oklch(0.92 0.06 90);
-  --accent-foreground: oklch(0.2 0.06 265);
+  --secondary: oklch(0.97 0.002 250);
+  --secondary-foreground: oklch(0.286 0 0);
+  --muted: oklch(0.96 0.002 250);
+  --muted-foreground: oklch(0.45 0.01 260);
+  --accent: oklch(0.91 0.18 95); /* #FFD60A */
+  --accent-foreground: oklch(0.2 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0.02 260);
-  --input: oklch(0.9 0.02 260);
-  --ring: oklch(0.78 0.16 85);
-  --chart-1: oklch(0.35 0.1 265);
+  --border: oklch(0.9 0.005 260);
+  --input: oklch(0.9 0.005 260);
+  --ring: oklch(0.91 0.18 95);
+  --chart-1: oklch(0.286 0 0);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.18 0.06 265);
+  --sidebar: oklch(0.286 0 0);
   --sidebar-foreground: oklch(0.96 0 0);
-  --sidebar-primary: oklch(0.78 0.16 85);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.24 0.05 265);
+  --sidebar-primary: oklch(0.91 0.18 95);
+  --sidebar-primary-foreground: oklch(0.2 0 0);
+  --sidebar-accent: oklch(0.34 0 0);
   --sidebar-accent-foreground: oklch(0.96 0 0);
-  --sidebar-border: oklch(0.3 0.05 265);
-  --sidebar-ring: oklch(0.78 0.16 85);
-  --hero-overlay: oklch(0.15 0.06 265 / 78%);
-  --cta: oklch(0.82 0.17 88);
-  --cta-foreground: oklch(0.18 0.06 265);
-  --cta-hover: oklch(0.75 0.18 85);
-  --accent-yellow: oklch(0.85 0.17 88);
-  --accent-yellow-foreground: oklch(0.18 0.06 265);
-  --surface: oklch(0.18 0.06 265);
+  --sidebar-border: oklch(0.34 0 0);
+  --sidebar-ring: oklch(0.91 0.18 95);
+  --hero-overlay: oklch(0.18 0 0 / 78%);
+  --cta: oklch(0.91 0.18 95); /* #FFD60A */
+  --cta-foreground: oklch(0.2 0 0);
+  --cta-hover: oklch(0.85 0.18 92);
+  --accent-yellow: oklch(0.91 0.18 95);
+  --accent-yellow-foreground: oklch(0.2 0 0);
+  --surface: oklch(0.286 0 0);
   --surface-foreground: oklch(0.96 0 0);
-  --gradient-primary: linear-gradient(135deg, oklch(0.22 0.09 265), oklch(0.32 0.12 260));
-  --gradient-hero: linear-gradient(135deg, oklch(0.18 0.08 265) 0%, oklch(0.28 0.12 260) 55%, oklch(0.4 0.13 250) 100%);
-  --gradient-accent: linear-gradient(135deg, oklch(0.82 0.17 88), oklch(0.72 0.18 70));
-  --gradient-cta: linear-gradient(135deg, oklch(0.86 0.17 90), oklch(0.74 0.18 75));
-  --shadow-elegant: 0 12px 40px -12px color-mix(in oklab, oklch(0.22 0.09 265) 35%, transparent);
-  --shadow-glow: 0 8px 30px -8px color-mix(in oklab, oklch(0.82 0.17 88) 45%, transparent);
+  --gradient-primary: linear-gradient(135deg, oklch(0.22 0 0), oklch(0.36 0 0));
+  --gradient-hero: linear-gradient(135deg, oklch(0.18 0 0) 0%, oklch(0.286 0 0) 55%, oklch(0.4 0 0) 100%);
+  --gradient-accent: linear-gradient(135deg, oklch(0.91 0.18 95), oklch(0.83 0.18 90));
+  --gradient-cta: linear-gradient(135deg, oklch(0.93 0.18 96), oklch(0.85 0.19 92));
+  --shadow-elegant: 0 12px 40px -12px color-mix(in oklab, oklch(0.18 0 0) 35%, transparent);
+  --shadow-glow: 0 8px 30px -8px color-mix(in oklab, oklch(0.91 0.18 95) 50%, transparent);
 }
 
 @layer base {
@@ -114,6 +115,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
   }
 }
 
