@@ -19,7 +19,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary/20">
+    <header className="sticky top-0 z-50 bg-gradient-primary backdrop-blur-md border-b border-cta/30 shadow-elegant">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Settings className="w-5 h-5 text-cta shrink-0" />
